@@ -1,0 +1,91 @@
+/*homework 5*/
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.top-menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_header{
+    width: 510px;
+}
+.main-text{
+    width: 425px;
+}
+.what-we-do{
+    display:flex;
+    justify-content: space-around;
+}
+.card{
+    display:block;
+    justify-content: center;
+    width: 359px;
+}
+.main-contacts{
+    display:flex;
+    /*justify-content: space-between;*/
+}
+.contacts{
+    display:block;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.map{
+    display: flex;
+    width: 100%;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+body {
+    font-family: sans-serif;
+}
+p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+h1 {
+    font-size: 64px;
+    color: #1F3F68;
+}
+
+h3 {
+    font-size: 36px;
+    /*text-align: center;*/
+}
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68;
+    /*text-align: center;*/
+}
+
+.fields {
+    border: 1px solid #356EAD; 
+    box-sizing: border-box; 
+    border-radius: 10px; 
+    opacity: 0.4; 
+}
+
+.buttons {
+    background: #5A98D0; 
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2); 
+    border-radius: 10px; 
+    font-weight: 500; 
+    font-size: 16px;
+    line-height: 26px; 
+    text-align: center; 
+    color: #FFFFFF; 
+    text-transform: uppercase; 
+}

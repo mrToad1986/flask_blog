@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.top-menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_header{
+    width: 510px;
+}
+.main-text{
+    justify-content: center;
+    width: 425px;
+}
+.what-we-do{
+    display:flex;
+    justify-content: space-around;
+}
+.card{
+    display:block;
+    justify-content: center;
+    width: 359px;
+}
+.main-contacts{
+    display:flex;
+    justify-content: space-between;
+}
+.contacts{
+    display:block;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.map{
+    display: flex;
+    width: 100%;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+body {
+    font-family: sans-serif;
+}
+p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+h1 {
+    font-size: 64px;
+    color: #1F3F68;
+}
+
+h3 {
+    font-size: 36px;
+    /*text-align: center;*/
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+}
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68;
+    /*text-align: center;*/
+}
+
+.fields {
+    border: 1px solid #356EAD; 
+    box-sizing: border-box; 
+    border-radius: 10px; 
+    opacity: 0.4; 
+}
+
+.buttons {
+    background: #5A98D0; 
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2); 
+    border-radius: 10px; 
+    font-weight: 500; 
+    font-size: 16px;
+    line-height: 26px; 
+    text-align: center; 
+    color: #FFFFFF; 
+    text-transform: uppercase; 
+}
+</style>
+{% endblock style %}
+
+
+{% block content %}
+<body>
+    <div class="container">
+        <div class="top-menu">
+            <a href="index.html">Главная</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="blog.html">Блог</a>
+        </div>
+        <hr>
+        <h2>Свяжитесь с нами</h2>
+        <div class="main-contacts">
+            <div class="contacts">
+
+                <p>
+                    Вступить в ряды улитководов вы можете здесь
+                </p>
+                <img
+                        src="{{ url_for('static', filename='images/Helix.jpg') }}"
+                        alt="здесь фото улитки"
+                        title="улитка"
+                        width="350">
+                <h4>Адрес:</h4>
+                <p>
+                    г. Раменское, ул. Автопроездная, д.26 стр.5
+                </p>
+                <h4>Телефоны:</h4>
+                <ul>
+                    <li>+8-800-000-00-00</li>
+                    <li>+8-800-999-99-99</li>
+                </ul>
+                <h4>Онлайн-сервисы:</h4>
+                <ul>
+                    <li>snail@snail.org</li>
+                    <li>www.snail.org</li>
+                </ul>
+            </div>
+            <div class="contacts">
+                <h4>Форма обратной связи:</h4>
+                <label for="name">Ваше имя </label><br>
+                <input class="fields" id="name" type="text" size="40" placeholder="Олег Петров"><br>
+                <label for="mail">Ваш e-mail </label><br>
+                <input class="fields" id="mail" type="email" size="40" placeholder="mail@mail.ru"><br>
+                <label for="coment">Комментарий </label><br>
+                <textarea class="fields" id="coment" cols="30" rows="5"></textarea><br>
+                <br>
+                <label for="list">Откуда вы о нас узнали?</label><br>
+                <select id="list" size="1">
+                    <option>Интернет</option>
+                    <option>ТВ</option>
+                    <option>Радио</option>
+                    <option>Пресса</option>
+                </select><br>
+                <br>
+                <label for="box">Даю согласие на обрабтку персональных данных</label>
+                <input class="fields" id="box" type="checkbox" checked="checked"><br>
+                <br>
+                <button class="buttons" type="submit">Отправить</button><br>
+                <button type="reset">Удалить</button><br>
+                <br>
+            </div>
+        </div>
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A719e3aca12731bb8bee875535330c5c3431a06daf967ad535fe7a4935d70b090&amp;width=100%&amp;height=350&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+                <br>
+        </div>
+        <hr>
+        <ul>
+            <div class = "footer">
+            <li>Приобрести питомца вы сможете здесь</li>
+            <li>+8-800-000-00-00</li>
+            <li>snail@snail.org</li>
+            </div>
+        </ul>
+        <p align='center'>
+            <b>
+                &copy; Все права защищены
+            </b>
+        </p>
+    </div>
+</body>
+{% endblock content %}

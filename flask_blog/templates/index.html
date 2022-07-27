@@ -1,0 +1,225 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+    }
+
+    .top-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main_header {
+        width: 510px;
+    }
+
+    .sub-header3 {
+        display: block;
+        justify-content: center;
+    }
+
+    .sub-header4 {
+        justify-content: center;
+    }
+
+    .main-text {
+        justify-content: center;
+        width: 425px;
+    }
+
+    .free-text {
+        justify-content: center;
+    }
+
+    .what-we-do {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        display: block;
+        justify-content: center;
+        width: 359px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .card-image {
+        display: block;
+        justify-content: center;
+    }
+
+    .main-contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contacts {
+        display: block;
+        width: 50%;
+        justify-content: flex-start;
+    }
+
+    .map {
+        display: flex;
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        color: #1F3F68;
+    }
+
+    h1 {
+        font-size: 64px;
+        color: #1F3F68;
+    }
+
+    h3 {
+        font-size: 36px;
+        /*text-align: center;*/
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 30px;
+        color: #1F3F68;
+        /*text-align: center;*/
+    }
+
+    .fields {
+        border: 1px solid #356EAD;
+        box-sizing: border-box;
+        border-radius: 10px;
+        opacity: 0.4;
+    }
+
+    .buttons {
+        background: #5A98D0;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+</style>
+{% endblock style %}
+
+
+{% block content %}
+<body>
+<div class="container">
+    <div class="top-menu">
+        <a href="index.html">Главная</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="blog.html">Блог</a>
+    </div>
+    <hr>
+    <div class="main_header">
+        <h1>Современная классификация</h1>
+    </div>
+    <div class="main-text">
+        <p>
+            Известно около 35 тыс. видов, которые принято отнсить к отряду лёгочных улиток.
+            Ниже приведён список некторых семейств отряда.
+        </p>
+    </div>
+    <div class="what-we-do">
+        <div class="card">
+            <div class="sub-header3">
+                <h3>Семейство Achatinidae</h3>
+            </div>
+            <div class="sub-header4">
+                <h4>Archachatina marginata</h4>
+            </div>
+            <div class="free-text">
+                <p>
+                    Тропическая наземная улитка из класса брюхоногих моллюсков семейства Achatinidae
+                </p>
+                <img src="{{ url_for('static', filename='images/ahatina.jpg') }}"
+                     alt="Ахатина"
+                     title="Ахатина"
+                     width="220">
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="sub-header3">
+                <h3>Семейство Helicidae Raf</h3>
+            </div>
+            <div class="sub-header4">
+                <h4>Enida Montana</h4>
+            </div>
+            <div class="free-text">
+                <p>
+                    Хелициды — семейство наземных стебельчатоглазых лёгочных улиток.
+                </p>
+                <img src="{{ url_for('static', filename='images/helicida.jpg') }}"
+                     alt="Хелицида"
+                     title="Хелицида"
+                     width="220">
+            </div>
+        </div>
+        <div class="card">
+            <div class="sub-header3">
+                <h3>Семейство Arionidae Gray</h3>
+            </div>
+            <div class="sub-header4">
+                <h4>Limax Maximus</h4>
+            </div>
+            <div class="free-text">
+                <p>
+                    Лесные слизни — семейство наземных брюхоногих моллюсков
+                </p>
+                <img src="{{ url_for('static', filename='images/slime.jpg') }}"
+                     alt="Слизень"
+                     title="Слизень"
+                     width="220">
+            </div>
+        </div>
+    </div>
+
+    <div class="line">
+        <hr>
+    </div>
+    <ul>
+        <div class="footer">
+            <li>Приобрести питомца вы сможете здесь</li>
+            <li>+8-800-000-00-00</li>
+            <li>snail@snail.org</li>
+        </div>
+    </ul>
+
+    <div class="copyright">
+        <p align='center'>
+            <b>
+                &copy; Все права защищены
+            </b>
+        </p>
+    </div>
+</div>
+</div>
+</body>
+{% endblock content %}
